@@ -1,6 +1,0 @@
-easy_admin:
-    entities:
-        Author:
-            class: "App\Entity\Author"
-        BlogPost:
-            class: App\Entity\BlogPost
