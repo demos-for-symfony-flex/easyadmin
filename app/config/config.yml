@@ -1,4 +1,4 @@
 easy_admin:
     entities:
-        - AppBundle\Entity\Author
-        - AppBundle\Entity\BlogPost
+        - App\Entity\Author
+        - App\Entity\BlogPost
