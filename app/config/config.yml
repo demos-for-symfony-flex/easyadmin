@@ -1,4 +1,6 @@
 easy_admin:
     entities:
-        - App\Entity\Author
-        - App\Entity\BlogPost
+        Author:
+            class: App\Entity\Author
+        BlogPost:
+            class: App\Entity\BlogPost
