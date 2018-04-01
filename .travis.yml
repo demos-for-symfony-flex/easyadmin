@@ -40,6 +40,9 @@ install:
 - composer install
 - composer initialize # -- --ansi
 
+- composer console -- server:start &
+- printf 'HEAD /admin/dashboard HTTP/1.1\r\n\r\n' | socat - TCP4:localhost:8000,forever >/dev/null # Waiting for server to connect.
+
 script:
 - elinks http://localhost:8000/admin -dump-color-mode 4 -dump
 - elinks http://localhost:8000/index.php -dump-color-mode 4 -dump
@@ -67,8 +70,6 @@ after_script:
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 - $GOPATH/bin/ccat config/packages/easy_admin.yaml
 
-- composer console -- server:start &
-- printf 'HEAD /admin/dashboard HTTP/1.1\r\n\r\n' | socat - TCP4:localhost:8000,forever >/dev/null # Waiting for server to connect.
 - composer console -- debug:router
 
 - composer show --latest
