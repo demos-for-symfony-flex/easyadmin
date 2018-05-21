@@ -1,4 +1,4 @@
-# easyadmin
+# [symfony-flex-demo](https://symfony-flex-demo.github.io)/easyadmin
 
 [![Build Status](https://travis-ci.org/symfony-flex-demo/easyadmin.svg?branch=master)](https://travis-ci.org/symfony-flex-demo/easyadmin)
 
